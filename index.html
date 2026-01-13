@@ -1,45 +1,68 @@
-body {
-    background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%);
-    font-family: 'Pretendard', sans-serif;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    color: #e0e0e0;
-}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 비행 탐험 놀이터</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="hero-section">
+            <img src="unnamed (1).webp" alt="Flight Mission" class="header-img">
+            <div class="header-text">
+                <h1>✈️ AI 비행 탐험 놀이터</h1>
+                <p>하늘을 날며 배우는 인공지능의 원리! <span class="badge">미션 수행 모드</span></p>
+            </div>
+        </header>
 
-.glass-container {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 40px;
-    padding: 40px;
-    width: 90%;
-    max-width: 1000px;
-}
+        <div class="stats-row">
+            <div class="glass-card">
+                <h3>비행 에너지 점수</h3>
+                <div class="score">0 <span>EXP</span></div>
+                <p>미션을 완수하여 훈장을 획득하세요!</p>
+            </div>
+            <div class="glass-card">
+                <h3>AI 관제탑 가이드</h3>
+                <p>비행기는 수많은 센서 데이터를 분석해 안전하게 비행해요. 아래 미션을 눌러 AI 조종사가 되어보세요!</p>
+            </div>
+        </div>
 
-header h1 { color: #fff; text-shadow: 0 0 10px #4facfe; }
-.subtitle { color: #a0a0a0; }
+        <div class="mission-grid">
+            <div class="mission-card blue" onclick="launchMission('shape')">
+                <div class="icon">🔵</div>
+                <h4>비행 물체 식별</h4>
+                <p>레이더에 포착된 도형을 보고 적군인지 아군인지 AI처럼 분류해봐요.</p>
+                <div class="tech-tag">🤖 이미지 인식 - Vision</div>
+            </div>
+            <div class="mission-card purple" onclick="launchMission('path')">
+                <div class="icon">🧭</div>
+                <h4>최적 경로 탐색</h4>
+                <p>구름과 번개를 피해 목적지까지 가장 빠른 길을 AI와 함께 찾아요.</p>
+                <div class="tech-tag">🤖 최적화 알고리즘</div>
+            </div>
+            <div class="mission-card orange" onclick="launchMission('predict')">
+                <div class="icon">🌦️</div>
+                <h4>기상 데이터 예측</h4>
+                <p>과거의 날씨 패턴을 분석해 비행하기 좋은 시간을 미리 알아맞혀봐요.</p>
+                <div class="tech-tag">🤖 데이터 예측 - Regression</div>
+            </div>
+            <div class="mission-card green" onclick="launchMission('signal')">
+                <div class="icon">📡</div>
+                <h4>비밀 신호 해독</h4>
+                <p>무전기에서 들리는 복잡한 소리 패턴 속에서 중요한 명령을 찾아내요.</p>
+                <div class="tech-tag">🤖 음성 분석 - Audio AI</div>
+            </div>
+        </div>
+    </div>
 
-.glass-card { background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(79, 172, 254, 0.3); }
-.big-number { color: #4facfe; }
-.fill { background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); }
+    <div id="mission-overlay" class="hidden">
+        <div class="game-window">
+            <button class="exit-btn" onclick="closeMission()">🏠 기지로 귀환</button>
+            <div id="mission-screen"></div>
+        </div>
+    </div>
 
-.item-card { 
-    background: rgba(255, 255, 255, 0.08); 
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #fff;
-    transition: all 0.3s ease;
-}
-
-.item-card:hover { 
-    transform: translateY(-10px); 
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0 20px rgba(79, 172, 254, 0.4);
-}
-
-.emoji { font-size: 2.5rem; }
-.tag { background: #333; color: #4facfe; border: none; }
-
-footer p { color: #4facfe; font-weight: bold; letter-spacing: 1px; }
+    <script src="main.js"></script>
+</body>
+</html>
