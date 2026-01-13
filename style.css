@@ -1,0 +1,15 @@
+/* Basic Clean Reset */
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    background-color: #000;
+}
+
+canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
