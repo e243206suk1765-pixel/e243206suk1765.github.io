@@ -44,3 +44,16 @@ body {
 }
 .game-window { background: white; color: #333; width: 90%; max-width: 800px; padding: 40px; border-radius: 30px; text-align: center; }
 .exit-btn { background: #ef4444; color: white; border: none; padding: 10px 20px; border-radius: 15px; cursor: pointer; }
+.game-btn, #mission-screen button {
+    padding: 12px 24px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+.game-btn:hover, #mission-screen button:hover {
+    background: #1d4ed8;
+}
