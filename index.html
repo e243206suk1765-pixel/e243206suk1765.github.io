@@ -1,23 +1,45 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>대영의 AI 젤리 놀이터</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="main-box">
-        <header>
-            <h1>🍇 대영이의 AI Jelly 놀이터</h1>
-            <p>내 주소: e243206suk1765.github.io</p>
-        </header>
-        
-        <section class="grid-container">
-            <div class="card"><h3>도형 젤리 찾기</h3><p>AI가 모양을 배워요!</p></div>
-            <div class="card"><h3>젤리 퍼즐</h3><p>특징을 찾아보세요.</p></div>
-            <div class="card"><h3>시계 맞추기</h3><p>시간을 예측합니다.</p></div>
-            <div class="card"><h3>무늬 예측</h3><p>패턴을 완성해요.</p></div>
-        </section>
-    </div>
-</body>
-</html>
+body {
+    background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%);
+    font-family: 'Pretendard', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #e0e0e0;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    padding: 40px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+header h1 { color: #fff; text-shadow: 0 0 10px #4facfe; }
+.subtitle { color: #a0a0a0; }
+
+.glass-card { background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(79, 172, 254, 0.3); }
+.big-number { color: #4facfe; }
+.fill { background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); }
+
+.item-card { 
+    background: rgba(255, 255, 255, 0.08); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.item-card:hover { 
+    transform: translateY(-10px); 
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(79, 172, 254, 0.4);
+}
+
+.emoji { font-size: 2.5rem; }
+.tag { background: #333; color: #4facfe; border: none; }
+
+footer p { color: #4facfe; font-weight: bold; letter-spacing: 1px; }
